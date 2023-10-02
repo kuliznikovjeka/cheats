@@ -404,6 +404,12 @@ body._lock {
   padding: 120px 0 35px 0;
 }
 
+@media (max-width: 525px) {
+  .hero {
+    padding: 70px 0 15px 0;
+  }
+}
+
 .hero__bg {
   z-index: -1;
   position: absolute;
