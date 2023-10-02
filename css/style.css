@@ -400,29 +400,39 @@ body._lock {
 }
 
 .hero {
+  margin-top: 90px;
   position: relative;
-  padding: 120px 0 35px 0;
+  padding: 180px 0 100px 0;
+  background-image: -webkit-image-set(url("../img/hero/bg.webp") type("image/webp"), url("../img/hero/bg.jpg") type("image/jpg"));
+  background-image: image-set(url("../img/hero/bg.webp") type("image/webp"), url("../img/hero/bg.jpg") type("image/jpg"));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+
+@media (max-width: 992px) {
+  .hero {
+    margin-top: 70px;
+    padding: 100px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: 70px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    margin-top: 50px;
+  }
 }
 
 @media (max-width: 525px) {
   .hero {
-    padding: 70px 0 15px 0;
+    padding: 30px 0 50px 0;
   }
-}
-
-.hero__bg {
-  z-index: -1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.hero__bg img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  max-width: 100%;
 }
 
 .hero__content {
@@ -431,7 +441,19 @@ body._lock {
 }
 
 .hero__content:not(:last-child) {
-  margin-bottom: 265px;
+  margin-bottom: 200px;
+}
+
+@media (max-width: 767px) {
+  .hero__content:not(:last-child) {
+    margin-bottom: 130px;
+  }
+}
+
+@media (max-width: 525px) {
+  .hero__content:not(:last-child) {
+    margin-bottom: 80px;
+  }
 }
 
 .hero__title {
@@ -478,6 +500,9 @@ body._lock {
   .hero__desc {
     font-size: 16px;
   }
+  .hero__desc:not(:last-child) {
+    margin-bottom: 70px;
+  }
 }
 
 .hero__btn {
@@ -491,12 +516,18 @@ body._lock {
 }
 
 .games {
-  padding: 35px 0;
+  padding: 100px 0;
+}
+
+@media (max-width: 992px) {
+  .games {
+    padding: 50px 0 25px 0;
+  }
 }
 
 @media (max-width: 525px) {
   .games {
-    padding: 15px 0 15px 0;
+    padding: 40px 0 15px 0;
   }
 }
 
@@ -551,7 +582,7 @@ body._lock {
 .about {
   position: relative;
   z-index: 10;
-  padding: 135px 0 35px 0;
+  padding: 35px 0;
 }
 
 @media (max-width: 525px) {
