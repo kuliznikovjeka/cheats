@@ -403,7 +403,7 @@ body._lock {
   margin-top: 90px;
   position: relative;
   padding: 180px 0 100px 0;
-  background: url("../img/hero/bg.jpg") 0 0/100% 100% no-repeat;
+  background: url("../img/hero/bg.jpg") center/cover no-repeat;
 }
 
 @media (max-width: 992px) {
@@ -507,48 +507,54 @@ body._lock {
 
 @-webkit-keyframes arr-down {
   0% {
-    top: -100px;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
   }
   100% {
-    top: 50px;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
 }
 
 @keyframes arr-down {
   0% {
-    top: -100px;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
   }
   100% {
-    top: 50px;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
 }
 
 @media (max-width: 525px) {
   @-webkit-keyframes arr-down {
     0% {
-      top: -50px;
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
     }
     100% {
-      top: 50px;
+      -webkit-transform: translateY(10px);
+              transform: translateY(10px);
     }
   }
   @keyframes arr-down {
     0% {
-      top: -50px;
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
     }
     100% {
-      top: 50px;
+      -webkit-transform: translateY(10px);
+              transform: translateY(10px);
     }
   }
 }
 
 .hero__arr-down {
-  position: relative;
   text-align: center;
   -webkit-filter: drop-shadow(0px 0px 4.7712px #fbed9a) drop-shadow(0px 0px 9.5424px #fbed9a) drop-shadow(0px 0px 33.3984px #fbed9a) drop-shadow(0px 0px 66.7968px #fbed9a) drop-shadow(0px 0px 114.5088px #fbed9a) drop-shadow(0px 0px 200.3904px #fbed9a);
           filter: drop-shadow(0px 0px 4.7712px #fbed9a) drop-shadow(0px 0px 9.5424px #fbed9a) drop-shadow(0px 0px 33.3984px #fbed9a) drop-shadow(0px 0px 66.7968px #fbed9a) drop-shadow(0px 0px 114.5088px #fbed9a) drop-shadow(0px 0px 200.3904px #fbed9a);
-  -webkit-animation: arr-down 2s infinite linear;
-          animation: arr-down 2s infinite linear;
+  animation: arr-down 4s infinite alternate-reverse linear;
 }
 
 .hero__arr-down img {

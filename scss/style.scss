@@ -288,7 +288,7 @@ body {
 	// background-repeat: no-repeat;
 	// background-size: cover;
 	// background-position: 100% 100%;
-	background: url("../img/hero/bg.jpg") 0 0 / 100% 100% no-repeat;
+	background: url("../img/hero/bg.jpg") center / cover no-repeat;
 	@media (max-width: 992px) {
 		margin-top: 70px;
 		padding: 100px 0;
@@ -376,29 +376,28 @@ body {
 
 	@keyframes arr-down {
 		0% {
-			top: -100px;
+			transform: translateY(-50px);
 		}
 		100% {
-			top: 50px;
+			transform: translateY(10px);
 		}
 	}
 	@media (max-width: 525px) {
 		@keyframes arr-down {
 			0% {
-				top: -50px;
+				transform: translateY(-50px);
 			}
 			100% {
-				top: 50px;
+				transform: translateY(10px);
 			}
 		}
 	}
 	&__arr-down {
-		position: relative;
 		text-align: center;
 		filter: drop-shadow(0px 0px 4.771200180053711px #fbed9a) drop-shadow(0px 0px 9.542400360107422px #fbed9a)
 			drop-shadow(0px 0px 33.398399353027344px #fbed9a) drop-shadow(0px 0px 66.79679870605469px #fbed9a)
 			drop-shadow(0px 0px 114.50879669189453px #fbed9a) drop-shadow(0px 0px 200.39039611816406px #fbed9a);
-		animation: arr-down 2s infinite linear;
+		animation: arr-down 4s infinite alternate-reverse linear;
 		img {
 			max-width: 100%;
 			width: 40px;
