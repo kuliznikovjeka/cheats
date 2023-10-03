@@ -392,13 +392,22 @@ body {
 			}
 		}
 	}
-	&__arr-down {
+
+	&__arr-wrpap {
 		text-align: center;
-		filter: drop-shadow(0px 0px 4.771200180053711px #fbed9a) drop-shadow(0px 0px 9.542400360107422px #fbed9a)
-			drop-shadow(0px 0px 33.398399353027344px #fbed9a) drop-shadow(0px 0px 66.79679870605469px #fbed9a)
-			drop-shadow(0px 0px 114.50879669189453px #fbed9a) drop-shadow(0px 0px 200.39039611816406px #fbed9a);
+	}
+
+	&__arr-down {
+		align-self: center;
+		justify-self: center;
+		display: inline-block;
+		// filter: drop-shadow(0px 0px 4.771200180053711px #fbed9a) drop-shadow(0px 0px 9.542400360107422px #fbed9a)
+		// 	drop-shadow(0px 0px 33.398399353027344px #fbed9a) drop-shadow(0px 0px 66.79679870605469px #fbed9a)
+		// 	drop-shadow(0px 0px 114.50879669189453px #fbed9a) drop-shadow(0px 0px 200.39039611816406px #fbed9a);
+
 		animation: arr-down 4s infinite alternate-reverse linear;
 		img {
+			box-shadow: 0px 0px 22px 20px #fbed9a;
 			max-width: 100%;
 			width: 40px;
 			height: 40px;
