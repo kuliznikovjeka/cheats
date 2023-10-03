@@ -550,23 +550,12 @@ body._lock {
   }
 }
 
-.hero__arr-wrpap {
-  text-align: center;
-}
-
 .hero__arr-down {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  display: inline-block;
+  text-align: center;
   animation: arr-down 4s infinite alternate-reverse linear;
 }
 
 .hero__arr-down img {
-  -webkit-box-shadow: 0px 0px 22px 20px #fbed9a;
-          box-shadow: 0px 0px 22px 20px #fbed9a;
   max-width: 100%;
   width: 40px;
   height: 40px;
