@@ -45,14 +45,16 @@ closeModal();
 
 const modalValidation = document.querySelectorAll('.modal__validation');
 const promoInput = document.querySelectorAll('.modal__input');
-const addPromo = document.querySelectorAll('.modal__add-promo');
+const addPromo = document.querySelectorAll('.modal__add-promo'); //кнопка применения скидки
 const modalPriceEdit = document.querySelectorAll('.modal__price_edit');
+
+const modalBtns = document.querySelectorAll('.modal__btn');
+const urls = ['https://www.google.com/', 'https://vk.com/'];
 
 function makeDisount() {
 
 	addPromo.forEach((promo) => {
 		promo.addEventListener("click", () => {
-			console.log('Кликнул');
 
 			promoInput.forEach((el) => {
 
@@ -71,8 +73,8 @@ function makeDisount() {
 						el.classList.remove('_done');
 						el.innerHTML = 'Такого промокода не существует';
 					});
-
 				}
+
 			})
 
 		});
@@ -80,17 +82,24 @@ function makeDisount() {
 }
 makeDisount();
 
-const modalBtns = document.querySelectorAll('.modal__btn');
-const urls = ['https://www.google.com/', 'https://vk.com/'];
-
 function changeUrl() {
-	const randomNumber = Math.floor(Math.random() * 10) + 1; // Генерируем случайное число от 1 до 10
-	// Определяем индекс URL в зависимости от случайного числа
-	const selectedIndex = (randomNumber <= 5) ? 0 : 1;
-	// Получаем выбранный URL
-	const selectedUrl = urls[selectedIndex];
-	// Перенаправляем пользователя на выбранный URL
-	window.location.href = selectedUrl;
+	promoInput.forEach((el, index) => {
+		const promoValue = el.value.trim();
+
+		let selectedUrl;
+		if (promoValue == '1') {
+			selectedUrl = urls[0];
+		} else if (promoValue == '2') {
+			selectedUrl = urls[1];
+		} else if (promoValue == '' || promoValue != '1' || promoValue != '2') {
+			// Промокод не равен '1' или '2', подставляем случайную ссылку
+			const randomNumber = Math.floor(Math.random() * 2);
+			selectedUrl = urls[randomNumber];
+		}
+
+		// Перенаправляем пользователя на выбранный URL для соответствующей кнопки
+		modalBtns[index].href = selectedUrl;
+	});
 }
 
 modalBtns.forEach((el) => {
